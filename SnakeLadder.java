@@ -17,24 +17,30 @@ public class SnakeLadder {
 	public static void main(String[] args) {
 		
 		int playerPosition = 0;
-		int numberOnDie = 0;
 		System.out.println("Initial position of Player is : " + playerPosition);
-		numberOnDie = RandomDieValue();
+		
+		while(playerPosition < 100) {
+		int numberOnDie = RandomDieValue();
 		System.out.println("Number on die is : " + numberOnDie);
 		int option = RandomOption();
 		System.out.println("The Option is : " + option);
 		
 		switch(option) {
 		case Ladder:
+			System.out.println("The Option is Ladder : " + Ladder);
 			playerPosition += numberOnDie;
+			if(playerPosition >= 100);
 			break;
 		case Snake:
+			System.out.println("The Option is Snake " + Snake);
 			playerPosition += numberOnDie;
+			if(playerPosition <= 0);
 			break;
 		default:
 			System.out.println("No Play");
 		}
-		System.out.println(playerPosition);
-		
+		System.out.println("Current Position of Player : " + playerPosition);
+		}
+		System.out.println("Player WON");
 	}
 }
